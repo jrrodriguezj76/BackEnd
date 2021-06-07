@@ -10,7 +10,7 @@ using AnunciosWebApi.Models;
 
 namespace AnunciosWebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     [ApiController]
     public class AnuncioController : ControllerBase 
     {
@@ -27,6 +27,29 @@ namespace AnunciosWebApi.Controllers
         {
             return Ok(await _context.Anuncios.ToListAsync());
         }
+
+        [HttpGet("ListarPagina")]
+        public async Task<IActionResult> Index(int pagina = 1)
+        {
+
+            var cantidadRegistrosporpagina = 10;
+            await _context.Viewanuncio.ToListAsync();
+            var modelo = _context.Viewanuncio.OrderBy(x => x.Id)
+                .Skip((pagina - 1) * cantidadRegistrosporpagina)
+                .Take(cantidadRegistrosporpagina).ToList();
+            
+            
+            return Ok(modelo);
+        }
+
+        [HttpGet("ListarView")]
+        public async Task<IActionResult> Listar()
+        {
+            
+            return Ok(await _context.Anuncios.Include(blog => blog.IdTipo).ToListAsync());
+        }
+
+
 
         // GET: Anuncio/Details/5
         [HttpGet("Detalle")]
@@ -91,7 +114,8 @@ namespace AnunciosWebApi.Controllers
                         throw;
                     }
                 }
-                return Ok(nameof(Index));
+                //return Ok(nameof(Index));
+                return Ok(anuncio);
             }
             return BadRequest("No se modifico el Anuncio");
         }

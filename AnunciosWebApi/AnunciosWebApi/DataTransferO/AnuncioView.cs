@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-#nullable disable
-
-namespace AnunciosWebApi.Models
+namespace AnunciosWebApi.DataTransferO
 {
-    public partial class Anuncio
+    public class AnuncioView
     {
         public int Id { get; set; }
         public string Titulo { get; set; }
-        public int IdTipo { get; set; }
+        public string Tipo { get; set; }
         public double Precio { get; set; }
         public byte[] Imagen { get; set; }
-
-        //public virtual Tipo Tipo { get; set; }
-
     }
 }

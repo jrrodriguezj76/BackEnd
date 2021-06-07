@@ -28,6 +28,7 @@ namespace AnunciosWebApi.Controllers
             return Ok(await _context.Tipos.ToListAsync());
         }
 
+      
         // GET: Tipo/Details/5
         [HttpGet("Detalle")]
         public async Task<IActionResult> Details(int? id)

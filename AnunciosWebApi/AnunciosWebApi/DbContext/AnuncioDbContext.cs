@@ -1,4 +1,5 @@
 ﻿using System;
+using AnunciosWebApi.DataTransferO;
 using AnunciosWebApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -22,6 +23,8 @@ namespace AnunciosWebApi.DBContext
         public virtual DbSet<Correo> Correos { get; set; }
         public virtual DbSet<Tipo> Tipos { get; set; }
 
+        public virtual DbSet<AnuncioView> Viewanuncio { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -34,6 +37,15 @@ namespace AnunciosWebApi.DBContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "C.UTF-8");
+
+            //modelBuilder.Entity<Tipo>().HasMany(s => s.Id_Tipo).WithOne(s => s.Tipo);
+            //modelBuilder.Entity<Anuncio>().HasMany(s => s.IdTipo).WithMany(s => s.Tipo);
+
+            modelBuilder.Entity<AnuncioView>(entity =>
+           {
+               entity.HasNoKey();
+               entity.ToView("Viewanuncio");
+           });
 
             modelBuilder.Entity<Anuncio>(entity =>
             {
