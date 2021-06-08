@@ -8711,11 +8711,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ProyectoAnuncios\\BackEnd\\AnunciosWebApi\\AnunciosWebApi\\AnunciosWebApi.csproj",
+      "projectUniqueName": "C:\\ProyectoAnunciosGitHub\\BackEnd\\AnunciosWebApi\\AnunciosWebApi\\AnunciosWebApi.csproj",
       "projectName": "AnunciosWebApi",
-      "projectPath": "C:\\ProyectoAnuncios\\BackEnd\\AnunciosWebApi\\AnunciosWebApi\\AnunciosWebApi.csproj",
+      "projectPath": "C:\\ProyectoAnunciosGitHub\\BackEnd\\AnunciosWebApi\\AnunciosWebApi\\AnunciosWebApi.csproj",
       "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-      "outputPath": "C:\\ProyectoAnuncios\\BackEnd\\AnunciosWebApi\\AnunciosWebApi\\obj\\",
+      "outputPath": "C:\\ProyectoAnunciosGitHub\\BackEnd\\AnunciosWebApi\\AnunciosWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",

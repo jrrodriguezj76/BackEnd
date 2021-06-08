@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MeCpdG9B7I3TMbtlKSPvpzr6xKuubbDfl23TPZp/oFpOMp6cK6k1cbmw3XQF9EF9FiNf/vS9C9gqJAsD3psJUA==",
+  "dgSpecHash": "Zi29oDfWua6aGHFX7r93IjbUSCe1sFrDgBsvR+8phbSEQiOAFfcFE7lEob1aFdYpjJDBhFNc+2bohp6/a6TIFg==",
   "success": true,
-  "projectFilePath": "C:\\ProyectoAnuncios\\BackEnd\\AnunciosWebApi\\AnunciosWebApi\\AnunciosWebApi.csproj",
+  "projectFilePath": "C:\\ProyectoAnunciosGitHub\\BackEnd\\AnunciosWebApi\\AnunciosWebApi\\AnunciosWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

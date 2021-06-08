@@ -25,7 +25,7 @@ namespace AnunciosWebApi.Controllers
         [HttpGet("Listar")]
         public async Task<IActionResult> Index()
         {
-            return Ok(await _context.Anuncios.ToListAsync());
+            return Ok(await _context.Viewanuncio.ToListAsync());
         }
 
         [HttpGet("ListarPagina")]
@@ -49,8 +49,6 @@ namespace AnunciosWebApi.Controllers
             return Ok(await _context.Anuncios.Include(blog => blog.IdTipo).ToListAsync());
         }
 
-
-
         // GET: Anuncio/Details/5
         [HttpGet("Detalle")]
         public async Task<IActionResult> Details(int? id)
@@ -61,6 +59,25 @@ namespace AnunciosWebApi.Controllers
             }
 
             var anuncio = await _context.Anuncios
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (anuncio == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(anuncio);
+        }
+
+        // GET: Anuncio/Details/5
+        [HttpGet("DetalleVista")]
+        public async Task<IActionResult> DetailsVista(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var anuncio = await _context.Viewanuncio
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (anuncio == null)
             {
